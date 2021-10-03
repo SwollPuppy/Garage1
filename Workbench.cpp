@@ -6,7 +6,10 @@ int main()
     //The start of this thing.
 	std::cout << "Hello World!\n";
 
-	//First test with function that takes a string variable and sets it.
+	//Function that just announces itself
+	TownCrier();
+
+	//Function that takes in a string variable and sets it.
 	std::string greet;
 	SetupString(greet);
 
