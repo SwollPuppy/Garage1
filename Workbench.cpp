@@ -15,5 +15,18 @@ int main()
 
 	//Now to see if that worked.
 	std::cout << greet.c_str() << std::endl;
+
+	//Setup for twosum
+	std::vector<int> nums = { 2, 3, 0, 1 };
+	std::vector<int> answer;
+	int val = 5;
+
+	//Now for the test
+	answer = twoSum(nums, val);
+
+	for (size_t i = 0; i < answer.size(); i++) {
+		std::cout << "I see " << answer[i] << std::endl;
+	}
+
 }
 
