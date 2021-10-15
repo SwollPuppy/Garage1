@@ -11,7 +11,7 @@ void SetupString(std::string &tosetup) {
 void showIntVector(std::vector<int>& aList) {
 	if (aList.size() > 1) {
 		for (size_t i = 0; i < aList.size(); i++) {
-			std::cout << aList[i];
+			std::cout << aList[i] << " ";
 		}
 		std::cout << std::endl;
 	}

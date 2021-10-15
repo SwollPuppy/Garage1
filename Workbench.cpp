@@ -24,6 +24,8 @@ int main()
 	//Now for the test
 	answer = twoSum(nums, val);
 
+	showIntVector(nums);
+
 	for (size_t i = 0; i < answer.size(); i++) {
 		std::cout << "I see " << answer[i] << std::endl;
 	}
