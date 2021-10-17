@@ -4,8 +4,9 @@
 
 #include <iostream>
 #include <vector>
+using namespace std;
 
 void TownCrier();
-void SetupString(std::string &);
-std::vector<int> twoSum(std::vector<int>&, int);
-void showIntVector(std::vector<int>&);
+void SetupString(string &);
+vector<int> twoSum(vector<int>&, int);
+void showIntVector(vector<int>&);

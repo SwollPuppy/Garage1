@@ -1,8 +1,7 @@
 #include "Workbench.h"
 
-
-std::vector<int> twoSum(std::vector<int>& nums, int target) {
-	std::vector<int> indices;
+vector<int> twoSum(vector<int>& nums, int target) {
+	vector<int> indices;
 	if (nums.size() > 1) {
 
 		for (size_t i = 0; i < nums.size(); i++) {

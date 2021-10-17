@@ -1,18 +1,18 @@
 #include "Workbench.h"
 
 void TownCrier() {
-	std::cout << "Hear ye! Hear ye!" << std::endl;
+	cout << "Hear ye! Hear ye!" << endl;
 }
 
-void SetupString(std::string &tosetup) {
+void SetupString(string &tosetup) {
 	tosetup = "I am the string.";
 }
 
-void showIntVector(std::vector<int>& aList) {
+void showIntVector(vector<int>& aList) {
 	if (aList.size() > 1) {
 		for (size_t i = 0; i < aList.size(); i++) {
-			std::cout << aList[i] << " ";
+			cout << aList[i] << " ";
 		}
-		std::cout << std::endl;
+		cout << endl;
 	}
 }
