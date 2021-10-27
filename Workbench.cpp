@@ -1,5 +1,7 @@
 #include "Workbench.h"
 
+using namespace std;
+
 //This is where it all starts. Using header files too.
 int main()
 {
