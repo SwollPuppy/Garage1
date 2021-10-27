@@ -3,5 +3,10 @@
 //Welcome to the header file
 
 #include <iostream>
+#include <vector>
+using namespace std;
+
 void TownCrier();
-void SetupString(std::string &);
+void SetupString(string &);
+vector<int> twoSum(vector<int>&, int);
+void showIntVector(vector<int>&);
