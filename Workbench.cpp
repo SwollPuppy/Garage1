@@ -1,4 +1,5 @@
 #include "Workbench.h"
+#include "Listerine.h"
 
 using namespace std;
 
@@ -28,9 +29,15 @@ int main()
 
 	showIntVector(nums);
 
-	for (size_t i = 0; i < answer.size(); i++) {
-		cout << "I see " << answer[i] << endl;
-	}
+	ListNode m1 = ListNode(25);
+	Solution quick;
+	val = quick.showList(&m1);
+	cout << "ListNode val = " << val << endl;
+	
+
+	//for (size_t i = 0; i < answer.size(); i++) {
+	//	cout << "I see " << answer[i] << endl;
+	//}
 
 }
 
