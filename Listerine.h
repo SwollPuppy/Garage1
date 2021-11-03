@@ -14,5 +14,5 @@ struct ListNode {
 class Solution {
 public:
 	ListNode* addTwoNumbers(ListNode*, ListNode*); 
-	int showList(ListNode*);
+	void showList(ListNode*);
 };

@@ -30,9 +30,11 @@ int main()
 	showIntVector(nums);
 
 	ListNode m1 = ListNode(25);
-	Solution quick;
-	val = quick.showList(&m1);
-	cout << "ListNode val = " << val << endl;
+	ListNode m2 = ListNode(50, &m1);
+	ListNode m3 = ListNode(75, &m2);
+	Solution leet;
+	leet.showList(&m3);
+	//cout << "ListNode val = " << val << endl;
 	
 
 	//for (size_t i = 0; i < answer.size(); i++) {
