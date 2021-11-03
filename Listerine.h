@@ -15,4 +15,5 @@ class Solution {
 public:
 	ListNode* addTwoNumbers(ListNode*, ListNode*); 
 	void showList(ListNode*);
+	int lists2int(ListNode*);
 };

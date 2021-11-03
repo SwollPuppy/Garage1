@@ -29,13 +29,12 @@ int main()
 
 	showIntVector(nums);
 
-	ListNode m1 = ListNode(25);
-	ListNode m2 = ListNode(50, &m1);
-	ListNode m3 = ListNode(75, &m2);
+	ListNode m1 = ListNode(2);
+	ListNode m2 = ListNode(4, &m1);
+	ListNode m3 = ListNode(3, &m2);
 	Solution leet;
 	leet.showList(&m3);
-	//cout << "ListNode val = " << val << endl;
-	
+	cout << leet.lists2int(&m3) << endl;
 
 	//for (size_t i = 0; i < answer.size(); i++) {
 	//	cout << "I see " << answer[i] << endl;
