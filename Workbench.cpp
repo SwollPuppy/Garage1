@@ -29,6 +29,7 @@ int main()
 
 	showIntVector(nums);
 
+	//This is the setup for linked lists
 	ListNode m1 = ListNode(2);
 	ListNode m2 = ListNode(4, &m1);
 	ListNode m3 = ListNode(3, &m2);
@@ -36,9 +37,6 @@ int main()
 	leet.showList(&m3);
 	cout << leet.lists2int(&m3) << endl;
 
-	//for (size_t i = 0; i < answer.size(); i++) {
-	//	cout << "I see " << answer[i] << endl;
-	//}
 
 }
 

@@ -16,9 +16,10 @@ void Solution::showList(ListNode* l1) {
 
 int Solution::lists2int(ListNode* l1) {
 	int num = 0;
+	int mark = 1;
 	while (l1 != NULL) {
-		num *= 10;
-		num += l1->val;
+		num += mark * l1->val;
+		mark *= 10;
 		l1 = l1->next;
 	}
 	return num;
