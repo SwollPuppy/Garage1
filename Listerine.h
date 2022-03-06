@@ -13,6 +13,8 @@ struct ListNode {
 
 class Solution {
 public:
+	Solution();
+	~Solution();
 	ListNode* addTwoNumbers(ListNode*, ListNode*); 
 	void showList(ListNode*);
 	int lists2int(ListNode*);

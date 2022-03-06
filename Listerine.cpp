@@ -1,6 +1,14 @@
 #include "Workbench.h"
 #include "Listerine.h"
- 
+
+Solution::Solution() {
+	cout << "Creating object" << endl;
+}
+
+Solution::~Solution() {
+	cout << "Destructing object" << endl;
+}
+
 ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
 	return l1;
 }
