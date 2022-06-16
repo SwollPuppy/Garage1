@@ -18,4 +18,5 @@ public:
 	ListNode* addTwoNumbers(ListNode*, ListNode*); 
 	void showList(ListNode*);
 	int lists2int(ListNode*);
+	ListNode* int2lists(int x);
 };
