@@ -17,7 +17,7 @@ int main()
 	SetupString(greet);
 
 	//Now to see if that worked.
-	cout << greet.c_str() << endl;
+	cout << greet << endl;
 
 	//Setup for twosum
 	vector<int> nums = { 2, 3, 0, 1 };
