@@ -10,14 +10,22 @@ Solution::~Solution() {
 }
 
 ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
-	return l1; // still working on this here.
+	int num1;
+	int num2;
+	int retnum;
+
+	num1 = lists2int(l1);
+	num2 = lists2int(l2);
+	retnum = num1 + num2;
+
+	ListNode* sol = int2lists(retnum);
+
+	return sol;
 }
 
 void Solution::showList(ListNode* l1) {
 	while (l1 != NULL) {
 		cout << l1->val << " -> ";
-		//l1->val = 4;
-		//cout << l1->val << "new";
 		l1 = l1->next;
 	} 
 	cout << "end" << endl;

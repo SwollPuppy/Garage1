@@ -44,7 +44,7 @@ int main()
 	cout << leet.lists2int(&n3) << endl;
 
 	cout << "Sol test" << endl;
-	ListNode* sol = leet.int2lists(365);
+	ListNode* sol = leet.addTwoNumbers(&m3, &n3);
 	leet.showList(sol);
 	cout << "Did you see that?" << endl;
 }
