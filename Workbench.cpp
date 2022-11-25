@@ -30,16 +30,19 @@ int main()
 	showIntVector(nums);
 
 	//This is the setup for linked lists
+	//Creating first list
 	ListNode m1 = ListNode(3);
 	ListNode m2 = ListNode(4, &m1);
 	ListNode m3 = ListNode(2, &m2);
 
+	//Creating second list
 	ListNode n1 = ListNode(4);
 	ListNode n2 = ListNode(6, &n1);
 	ListNode n3 = ListNode(5, &n2);
 
+	//Creating solution object to work with
 	Solution leet;
-	leet.showList(&m3);
+	leet.showList(&m3); //Testing the show list feature
 	leet.showList(&n3);
 	leet.showList(&m2);
 	cout << leet.lists2int(&m3) << endl;
@@ -48,6 +51,7 @@ int main()
 	cout << "Sol test" << endl;
 	ListNode* sol = leet.addTwoNumbers(&m3, &n3);
 	leet.showList(sol);
+	//delete &m3;
 	cout << "Did you see that?" << endl;
 }
 

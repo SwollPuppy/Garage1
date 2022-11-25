@@ -6,7 +6,7 @@ Solution::Solution() {
 }
 
 Solution::~Solution() {
-	cout << "Destructing object" << endl;
+	cout << "Destructing Solution object" << endl;
 }
 
 ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -24,7 +24,7 @@ ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
 }
 
 void Solution::showList(ListNode* l1) {
-	while (l1 != NULL) {
+	while (l1 != nullptr) {
 		cout << l1->val << " -> ";
 		l1 = l1->next;
 	} 
@@ -35,7 +35,7 @@ void Solution::showList(ListNode* l1) {
 int Solution::lists2int(ListNode* l1) {
 	int num = 0;
 	int mark = 1;
-	while (l1 != NULL) {
+	while (l1 != nullptr) {
 		num += mark * l1->val;
 		mark *= 10;
 		l1 = l1->next;
@@ -48,15 +48,15 @@ ListNode* Solution::int2lists(int x) {
 	ListNode* answer = nullptr;
 	ListNode* chain = nullptr;
 
+	//If there is at least a number, create a node
 	if (x >= 0) {
-		cout << "The int is " << x << endl;
 		answer = new ListNode(x % 10);
 		chain = answer;
 	}
 
+	//If there is more than one digit, create other nodes
 	while (x / 10 > 0) {
 		x /= 10;
-		cout << "Creating node for " << x % 10 << endl;
 		chain->next = new ListNode(x % 10);
 		chain = chain->next;
 	}
