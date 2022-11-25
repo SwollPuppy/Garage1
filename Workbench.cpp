@@ -1,4 +1,7 @@
 #include "Workbench.h"
+#include "Listerine.h"
+
+using namespace std;
 
 //This is where it all starts. Using header files too.
 int main()
@@ -14,7 +17,7 @@ int main()
 	SetupString(greet);
 
 	//Now to see if that worked.
-	cout << greet.c_str() << endl;
+	cout << greet << endl;
 
 	//Setup for twosum
 	vector<int> nums = { 2, 3, 0, 1 };
@@ -26,9 +29,29 @@ int main()
 
 	showIntVector(nums);
 
-	for (size_t i = 0; i < answer.size(); i++) {
-		cout << "I see " << answer[i] << endl;
-	}
+	//This is the setup for linked lists
+	//Creating first list
+	ListNode m1 = ListNode(3);
+	ListNode m2 = ListNode(4, &m1);
+	ListNode m3 = ListNode(2, &m2);
 
+	//Creating second list
+	ListNode n1 = ListNode(4);
+	ListNode n2 = ListNode(6, &n1);
+	ListNode n3 = ListNode(5, &n2);
+
+	//Creating solution object to work with
+	Solution leet;
+	leet.showList(&m3); //Testing the show list feature
+	leet.showList(&n3);
+	leet.showList(&m2);
+	cout << leet.lists2int(&m3) << endl;
+	cout << leet.lists2int(&n3) << endl;
+
+	cout << "Sol test" << endl;
+	ListNode* sol = leet.addTwoNumbers(&m3, &n3);
+	leet.showList(sol);
+	//delete &m3;
+	cout << "Did you see that?" << endl;
 }
 
