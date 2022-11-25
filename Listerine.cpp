@@ -44,21 +44,22 @@ int Solution::lists2int(ListNode* l1) {
 }
 
 ListNode* Solution::int2lists(int x) {
-	ListNode* answer = NULL;
-	ListNode* chain(0);
-	answer = chain;
+
+	ListNode* answer = nullptr;
+	ListNode* chain = nullptr;
+
+	if (x >= 0) {
+		cout << "The int is " << x << endl;
+		answer = new ListNode(x % 10);
+		chain = answer;
+	}
 
 	while (x / 10 > 0) {
-
-		//chain->val = x;
-		//chain->next = &ListNode(0);
-		//chain = chain->next;
-		
-		cout << x % 10 << endl;
 		x /= 10;
+		cout << "Creating node for " << x % 10 << endl;
+		chain->next = new ListNode(x % 10);
+		chain = chain->next;
 	}
-	//chain->val = x;
-	cout << x << endl;
 
 	return answer;
 }

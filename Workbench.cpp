@@ -40,6 +40,8 @@ int main()
 
 	Solution leet;
 	leet.showList(&m3);
+	leet.showList(&n3);
+	leet.showList(&m2);
 	cout << leet.lists2int(&m3) << endl;
 	cout << leet.lists2int(&n3) << endl;
 
