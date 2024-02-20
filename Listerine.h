@@ -25,7 +25,7 @@ public:
 	//Uses lists2int and int2lists
 	ListNode* addTwoNumbers(ListNode*, ListNode*); 
 	
-	// Goes throuhg a linked list of single int's and displays their value.
+	// Goes through a linked list of single int's and displays their value.
 	void showList(ListNode*);
 
 	//Converts a linked lists of single int's into a single int value
@@ -33,4 +33,7 @@ public:
 
 	//Function that converts an int into a linked lists of single digit int's
 	ListNode* int2lists(int x);
+
+	//The real solution. Turns out that int's a even long long int's don't cover all the cases.
+	ListNode* add2Numbers(ListNode*, ListNode*);
 };
