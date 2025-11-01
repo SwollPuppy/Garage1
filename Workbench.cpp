@@ -51,7 +51,6 @@ int main()
 	cout << "Sol test" << endl;
 	ListNode* sol = leet.addTwoNumbers(&m3, &n3);
 	leet.showList(sol);
-	//delete &m3;
 	cout << "Did you see that?" << endl;
 }
 

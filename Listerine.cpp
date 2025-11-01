@@ -64,7 +64,7 @@ ListNode* Solution::int2lists(int x) {
 	return answer;
 }
 
-ListNode* add2Numbers(ListNode* l1, ListNode* l2) {
+ListNode* Solution::add2Numbers(ListNode* l1, ListNode* l2) {
 	ListNode* dummyHead = new ListNode(0);
 	ListNode* tail = dummyHead;
 	int carry = 0;
