@@ -9,17 +9,28 @@ Parsley::~Parsley() {
 	cout << "Destructing Parsley object" << endl;
 }
 
-vector<string> Parsley::parseStringVector(stringstream& steam) {
+// Attempted to overload the function, but we need more than just a change in return type
+//vector<string> Parsley::parseStringVector(stringstream& steam) {
+//	string pstring;
+//	vector<string> pvector;
+//
+//	while (steam.good()) {
+//		getline(steam, pstring, ',');
+//		pvector.push_back(pstring);
+//	}
+//
+//	return pvector;
+//}	
+
+void Parsley::parseStringVector(stringstream& steam) {
 	string pstring;
-	vector<string> pvector;
 
 	while (steam.good()) {
 		getline(steam, pstring, ',');
-		pvector.push_back(pstring);
+		my_parse.push_back(pstring);
 	}
+}
 
-	return pvector;
-}	
 int Parsley::maxVal(vector<string>& s_vect) {
 	int m_val = 0;
 	int t_val;
@@ -38,6 +49,14 @@ void Parsley::showStringVector(vector<string>& sList) {
 	if (sList.size() > 1) {
 		for (size_t i = 0; i < sList.size(); i++) {
 			std::cout << sList[i] << std::endl;
+		}
+	}
+}
+
+void Parsley::showStringVector() {
+	if (my_parse.size() > 1) {
+		for (string item : my_parse) {
+			cout << item << endl;
 		}
 	}
 }

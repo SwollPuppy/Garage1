@@ -56,8 +56,10 @@ int main()
 	cout << "Parsley test" << endl;
 	Parsley shrub; 
 	stringstream sequence("3,5,9,2,7");
-	vector<string> parsed_vector = shrub.parseStringVector(sequence);
-	shrub.showStringVector(parsed_vector);
+	//vector<string> parsed_vector = shrub.parseStringVector(sequence);
+	shrub.parseStringVector(sequence);
+	shrub.showStringVector();
+	//shrub.showStringVector(parsed_vector);
 
 
 	cout << "Did you see that?" << endl;
