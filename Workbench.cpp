@@ -54,12 +54,17 @@ int main()
 	leet.showList(sol);
 
 	cout << "Parsley test" << endl;
+	string user_input;
 	Parsley shrub; 
+	Parsley userbush;
 	stringstream sequence("3,5,9,2,7");
-	//vector<string> parsed_vector = shrub.parseStringVector(sequence);
 	shrub.parseStringVector(sequence);
 	shrub.showStringVector();
-	//shrub.showStringVector(parsed_vector);
+	cout << "Pass me a string of comma, separated integers: ";
+	cin >> user_input;
+	stringstream user_sequence(user_input);
+	userbush.parseStringVector(user_sequence);
+	userbush.showStringVector();
 
 
 	cout << "Did you see that?" << endl;
