@@ -34,14 +34,6 @@ int Parsley::maxVal() {
 	return m_val;
 }
 
-void Parsley::showStringVector(vector<string>& sList) {
-	if (sList.size() > 1) {
-		for (size_t i = 0; i < sList.size(); i++) {
-			std::cout << sList[i] << std::endl;
-		}
-	}
-}
-
 void Parsley::showStringVector() {
 	if (my_parse.size() > 1) {
 		for (string item : my_parse) {

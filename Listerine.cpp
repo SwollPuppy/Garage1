@@ -2,7 +2,7 @@
 #include "Listerine.h"
 
 Link::Link() {
-	cout << "Creating object" << endl;
+	cout << "Creating Link object" << endl;
 }
 
 Link::~Link() {
