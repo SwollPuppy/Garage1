@@ -41,8 +41,8 @@ int main()
 	ListNode n2 = ListNode(6, &n1);
 	ListNode n3 = ListNode(5, &n2);
 
-	//Creating solution object to work with
-	Solution leet;
+	//Creating Link object to work with
+	Link leet;
 	leet.showList(&m3); //Testing the show list feature
 	leet.showList(&n3);
 	leet.showList(&m2);

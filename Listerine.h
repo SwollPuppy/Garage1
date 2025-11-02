@@ -12,14 +12,14 @@ struct ListNode {
 	~ListNode() { cout << "*"; } //You can alter the behavior of destructors
 };
 
-class Solution {
+class Link {
 public:
 	
 	//Constructor
-	Solution();
+	Link();
 
 	//Destructor
-	~Solution();
+	~Link();
 
 	//Main challenge. Converts two linked lists and returns the "sum" in a list
 	//Uses lists2int and int2lists
@@ -34,6 +34,6 @@ public:
 	//Function that converts an int into a linked lists of single digit int's
 	ListNode* int2lists(int x);
 
-	//The real solution. Turns out that int's a even long long int's don't cover all the cases.
+	//The real Link. Turns out that int's a even long long int's don't cover all the cases.
 	ListNode* add2Numbers(ListNode*, ListNode*);
 };
