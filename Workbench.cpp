@@ -66,6 +66,7 @@ int main()
 	stringstream user_sequence(user_input);
 	userbush.parseStringVector(user_sequence);
 	userbush.showStringVector();
+	cout << "Max value is: " << userbush.maxVal() << endl;
 
 
 	cout << "Did you see that?" << endl;

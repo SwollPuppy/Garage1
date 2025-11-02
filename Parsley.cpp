@@ -9,19 +9,6 @@ Parsley::~Parsley() {
 	cout << "Destructing Parsley object" << endl;
 }
 
-// Attempted to overload the function, but we need more than just a change in return type
-//vector<string> Parsley::parseStringVector(stringstream& steam) {
-//	string pstring;
-//	vector<string> pvector;
-//
-//	while (steam.good()) {
-//		getline(steam, pstring, ',');
-//		pvector.push_back(pstring);
-//	}
-//
-//	return pvector;
-//}	
-
 void Parsley::parseStringVector(stringstream& steam) {
 	string pstring;
 
@@ -35,10 +22,14 @@ int Parsley::maxVal() {
 	int m_val = 0;
 	int t_val;
 	for (string s_val : my_parse) {
-		t_val = stoi(s_val);
-		if ((t_val > m_val)) {
-			m_val = t_val;
+		try {
+			t_val = stoi(s_val);
 		}
+		catch (const invalid_argument& e) {
+			cerr << "Uh uh uh. " << s_val << " is not an int.: " << e.what() << endl;
+		};
+
+		m_val = max(m_val, t_val);
 	}
 	return m_val;
 }
