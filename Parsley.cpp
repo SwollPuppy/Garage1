@@ -31,17 +31,15 @@ void Parsley::parseStringVector(stringstream& steam) {
 	}
 }
 
-int Parsley::maxVal(vector<string>& s_vect) {
+int Parsley::maxVal() {
 	int m_val = 0;
 	int t_val;
-
-	for (string s_val : s_vect) {
+	for (string s_val : my_parse) {
 		t_val = stoi(s_val);
 		if ((t_val > m_val)) {
 			m_val = t_val;
 		}
 	}
-
 	return m_val;
 }
 

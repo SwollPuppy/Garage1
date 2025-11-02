@@ -60,6 +60,7 @@ int main()
 	stringstream sequence("3,5,9,2,7");
 	shrub.parseStringVector(sequence);
 	shrub.showStringVector();
+	cout << "Max value is: " << shrub.maxVal() << endl;
 	cout << "Pass me a string of comma, separated integers: ";
 	cin >> user_input;
 	stringstream user_sequence(user_input);

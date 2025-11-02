@@ -17,7 +17,7 @@ public:
 	void parseStringVector(stringstream&);
 
 	// This will return the max value out of the vector. Strings will be converted into ints
-	int maxVal(vector<string>&);
+	int maxVal();
 
 	// Something that will list out the elements in a vector of strings
 	void showStringVector(vector<string>&);
