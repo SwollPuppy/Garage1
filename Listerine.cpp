@@ -1,15 +1,15 @@
 #include "Workbench.h"
 #include "Listerine.h"
 
-Solution::Solution() {
-	cout << "Creating object" << endl;
+Link::Link() {
+	cout << "Creating Link object" << endl;
 }
 
-Solution::~Solution() {
-	cout << "Destructing Solution object" << endl;
+Link::~Link() {
+	cout << "Destructing Link object" << endl;
 }
 
-ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
+ListNode* Link::addTwoNumbers(ListNode* l1, ListNode* l2) {
 	int num1;
 	int num2;
 	int retnum;
@@ -23,7 +23,7 @@ ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
 	return sol;
 }
 
-void Solution::showList(ListNode* l1) {
+void Link::showList(ListNode* l1) {
 	while (l1 != nullptr) {
 		cout << l1->val << " -> ";
 		l1 = l1->next;
@@ -32,7 +32,7 @@ void Solution::showList(ListNode* l1) {
 	return;
 }
 
-int Solution::lists2int(ListNode* l1) {
+int Link::lists2int(ListNode* l1) {
 	int num = 0;
 	int mark = 1;
 	while (l1 != nullptr) {
@@ -43,7 +43,7 @@ int Solution::lists2int(ListNode* l1) {
 	return num;
 }
 
-ListNode* Solution::int2lists(int x) {
+ListNode* Link::int2lists(int x) {
 
 	ListNode* answer = nullptr;
 	ListNode* chain = nullptr;
@@ -64,7 +64,7 @@ ListNode* Solution::int2lists(int x) {
 	return answer;
 }
 
-ListNode* add2Numbers(ListNode* l1, ListNode* l2) {
+ListNode* Link::add2Numbers(ListNode* l1, ListNode* l2) {
 	ListNode* dummyHead = new ListNode(0);
 	ListNode* tail = dummyHead;
 	int carry = 0;

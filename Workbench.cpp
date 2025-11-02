@@ -1,5 +1,6 @@
 #include "Workbench.h"
 #include "Listerine.h"
+#include "Parsley.h"
 
 using namespace std;
 
@@ -40,8 +41,8 @@ int main()
 	ListNode n2 = ListNode(6, &n1);
 	ListNode n3 = ListNode(5, &n2);
 
-	//Creating solution object to work with
-	Solution leet;
+	//Creating Link object to work with
+	Link leet;
 	leet.showList(&m3); //Testing the show list feature
 	leet.showList(&n3);
 	leet.showList(&m2);
@@ -51,7 +52,23 @@ int main()
 	cout << "Sol test" << endl;
 	ListNode* sol = leet.addTwoNumbers(&m3, &n3);
 	leet.showList(sol);
-	//delete &m3;
+
+	cout << "Parsley test" << endl;
+	string user_input;
+	Parsley shrub; 
+	Parsley userbush;
+	stringstream sequence("3,5,9,2,7");
+	shrub.parseStringVector(sequence);
+	shrub.showStringVector();
+	cout << "Max value is: " << shrub.maxVal() << endl;
+	cout << "Pass me a string of comma, separated integers: ";
+	cin >> user_input;
+	stringstream user_sequence(user_input);
+	userbush.parseStringVector(user_sequence);
+	userbush.showStringVector();
+	cout << "Max value is: " << userbush.maxVal() << endl;
+
+
 	cout << "Did you see that?" << endl;
 }
 

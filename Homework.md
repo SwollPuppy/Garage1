@@ -2,7 +2,7 @@
 
 ## Solutions to bring over into the Garage 
 
-- [ ] StandardIn
+- [x] StandardIn
 - [ ] Dec2Oct
 - [ ] Anvil
 - [ ] Rectum
