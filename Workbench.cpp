@@ -84,17 +84,20 @@ int main()
 	if (OCTOPUS) {
 		cout << "*** Octopus Test ***" << endl;
 		
-		int dval = 9;
+		int dval = 729;
 		int oval;
 		
 		Octopus squid;
 		oval = squid.dec2oct(dval);
 		cout << "The octal value of " << dval << " is: " << oval << endl;
+		cout << "The decimal value of " << oval << " is: " << squid.oct2dec(oval) << endl;
 
-
-		//vector<int> tentacles = { 10, 3, 5, 7, 2, 8 };
-		//int longest = findLongestTentacle(tentacles);
-		//cout << "The longest tentacle is: " << longest << endl;
+		vector<int> numlist = { 1, 2, 3, 2, 4, 5, 1, 6, 3 };
+		cout << "Original vector: ";
+		showIntVector(numlist);
+		squid.noClone(numlist);
+		cout << "Vector after removing duplicates: ";
+		showIntVector(numlist);
 	}
 
 

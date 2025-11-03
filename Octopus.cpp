@@ -11,9 +11,9 @@ Octopus::~Octopus() {
 
 
 int Octopus::dec2oct(int x) {
-	int y = x%8;
+	int y = x % 8;
 	int place = 10;
-	while(x>8){
+	while(x > 8){
 		x /= 8;
 		y += (x % 8) * place;
 		place *= 10;
@@ -32,4 +32,10 @@ int Octopus::oct2dec(int x) {
 		x /= 10;
 	}
 	return y;
+}
+
+void Octopus::noClone(vector<int>& vec) {
+	sort(vec.begin(), vec.end());
+	auto last = unique(vec.begin(), vec.end());
+	vec.erase(last, vec.end());
 }
