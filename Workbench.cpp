@@ -1,13 +1,15 @@
 #include "Workbench.h"
 #include "Listerine.h"
 #include "Parsley.h"
+#include "Octopus.h"
 
 using namespace std;
 
 // Which part of the workbench do we want to enable?
 //bool LEGACY    = true;
-bool LINKIT    = true;
-bool PARSETEST = true;
+bool LINKIT    = false;
+bool PARSETEST = false;
+bool OCTOPUS   = true;
 
 //This is where it all starts. Using header files too.
 int main()
@@ -78,6 +80,26 @@ int main()
 		userbush.showStringVector();
 		cout << "Max value is: " << userbush.maxVal() << endl;
 	}
+
+	if (OCTOPUS) {
+		cout << "*** Octopus Test ***" << endl;
+		
+		int dval = 729;
+		int oval;
+		
+		Octopus squid;
+		oval = squid.dec2oct(dval);
+		cout << "The octal value of " << dval << " is: " << oval << endl;
+		cout << "The decimal value of " << oval << " is: " << squid.oct2dec(oval) << endl;
+
+		vector<int> numlist = { 1, 2, 3, 2, 4, 5, 1, 6, 3 };
+		cout << "Original vector: ";
+		showIntVector(numlist);
+		squid.noClone(numlist);
+		cout << "Vector after removing duplicates: ";
+		showIntVector(numlist);
+	}
+
 
 	cout << "Did you see that?" << endl;
 }
