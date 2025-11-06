@@ -2,6 +2,7 @@
 #include "Listerine.h"
 #include "Parsley.h"
 #include "Octopus.h"
+#include "Acme.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ using namespace std;
 //bool LEGACY    = true;
 bool LINKIT    = false;
 bool PARSETEST = false;
-bool OCTOPUS   = true;
+bool OCTOPUS   = false;
 bool ACME      = true;
 
 //This is where it all starts. Using header files too.
@@ -103,14 +104,19 @@ int main()
 
 	if(ACME){
 		cout << "*** ACME Test ***" << endl;
-		//ACME code would go here
 
-		vector<vector<int>> redDrones = { {2,3,1},{4,3,1},{1,1,2} };
-		vector<vector<int>> targets_1 = { {1,3 }, { 3,3 },{5,3},{2,2} };
+		vector<vector<int>> coyotes = { {2,3,1},{4,3,1},{1,1,2} };
+		vector<vector<int>> roadRunners = { {1,3}, {3,3},{5,3},{2,2} };
 
-		vector<vector<int>> blueDrones = { {1,2,2},{2,2,2},{4,3,2},{4,3,3} };
-		vector<vector<int>> targets_2 = { {1,1},{2,2},{3,3},{4,4},{5,5} };
+		vector<vector<int>> drones = { {1,2,2},{2,2,2},{4,3,2},{4,3,3} };
+		vector<vector<int>> targets = { {1,1},{2,2},{3,3},{4,4},{5,5} };
 
+		Acme anvil; 
+		anvil.getKillCount(coyotes, roadRunners);
+		anvil.showVector();
+
+		anvil.getKillCount(drones, targets);
+		anvil.showVector();
 	}
 
 

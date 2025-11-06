@@ -34,3 +34,11 @@ int Acme::isItHit(int x, int y, int r, int a, int b) {
 
 	return 0;
 }
+
+void Acme::showVector() {
+	cout << "[ ";
+	for (int count : killList) {
+		cout << count << " ";
+	}
+	cout << "]" << endl;
+}
