@@ -133,7 +133,9 @@ int main()
 		hermione.areaOfMaxDiagonal(otter);
 
 		cout << "Max rectangle for harry " << harry.showMaxDiagonal() << endl;
+		harry.showDimensions();
 		cout << "Max rectangle for hermione " << hermione.showMaxDiagonal() << endl;
+		hermione.showDimensions();
 
 	}
 

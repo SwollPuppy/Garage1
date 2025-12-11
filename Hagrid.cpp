@@ -4,6 +4,8 @@
 Hagrid::Hagrid() {
 	cout << "Creating Hagrid object" << endl;
 	maxArea = 0;
+	maxLength = 0;
+	maxHeight = 0;
 }
 
 Hagrid::~Hagrid() {
@@ -23,11 +25,20 @@ void Hagrid::areaOfMaxDiagonal(vector<vector<int>>& dimensions){
 			maxHeight = dimensions[i][1];
 		}
 		else if (diag == maxDiaganol) {
-			maxArea = max(maxArea, dimensions[i][0] * dimensions[i][1]);
+			if (dimensions[i][0] * dimensions[i][1] > maxArea) {
+				maxArea = dimensions[i][0] * dimensions[i][1];
+				maxLength = dimensions[i][0];
+				maxHeight = dimensions[i][1];
+			}
+			
+			//maxArea = max(maxArea, dimensions[i][0] * dimensions[i][1]);
 		}
 	}
 
-	//return maxArea;
+}
+
+void Hagrid::showDimensions() {
+	cout << "Height: " << maxHeight << "  Length: " << maxLength << endl;
 }
 
 //int Hagrid::areaOfMaxDiagonal(vector<vector<int>>& matrix) {

@@ -13,11 +13,11 @@ using namespace std;
  * rectangle. Find the rectangle with the maximum diagonal length. and return its      *
  * area. If there are multiple rectangles with the same maximum diagonal length,       *
  * return the area of the largest one.                                                 *
- * 
- * As an extra bonus, copilot tried to make a solution that would find the largest  
- * area of a binary matrix diagonal of 1's. It is commented out in the cpp file. It 
- * came out of nowhere and I have no idea why it thought of that.
- *
+ *                                                                                     *
+ * As an extra bonus, copilot tried to make a solution that would find the largest     *
+ * area of a binary matrix diagonal of 1's. It is commented out in the cpp file. It    *
+ * came out of nowhere and I have no idea why it thought of that.                      *
+ *                                                                                     *
  * Topics covered:                                                                     *
  * - Math mostly                                                                       *
  * - Vector of vectors                                                                 *
@@ -41,6 +41,8 @@ public:
 	void areaOfMaxDiagonal(vector<vector<int>>&);
 
 	int showMaxDiagonal() const { return maxArea; }
+
+	void showDimensions();
 
 private:
 
