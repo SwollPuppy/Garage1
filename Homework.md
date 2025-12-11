@@ -4,8 +4,8 @@
 
 - [x] StandardIn
 - [x] Dec2Oct
-- [ ] Anvil
-- [ ] Rectum
+- [x] Anvil
+- [x] Rectum
 - [ ] Anna
 - [ ] StringSort
 - [ ] LLKoolAid

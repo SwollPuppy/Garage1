@@ -11,7 +11,9 @@ Acme::~Acme() {
 
 
 void Acme::getKillCount(vector<vector<int>> droneList, vector<vector<int>> targetList) {
-	//vector<int> killList;
+	
+	// Clear previous killList
+	killList.clear();
 
 	for (vector<int> drone : droneList) {
 
@@ -23,8 +25,6 @@ void Acme::getKillCount(vector<vector<int>> droneList, vector<vector<int>> targe
 	}
 
 	return;
-
-	//return killList;
 }
 
 int Acme::isItHit(int x, int y, int r, int a, int b) {
