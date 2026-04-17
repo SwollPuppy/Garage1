@@ -9,11 +9,12 @@ using namespace std;
 
 // Which part of the workbench do we want to enable?
 //bool LEGACY    = true;
-bool LINKIT    = false;
+bool LINKIT    = true;
 bool PARSETEST = false;
 bool OCTOPUS   = false;
 bool ACME      = true;
 bool HAGRID    = true;
+bool REWIND    = true;
 
 //This is where it all starts. Using header files too.
 int main()
@@ -139,6 +140,9 @@ int main()
 
 	}
 
+	if (REWIND) {
+
+	}
 
 	cout << "Did you see that?" << endl;
 }
