@@ -89,3 +89,15 @@ ListNode* Link::add2Numbers(ListNode* l1, ListNode* l2) {
 	delete dummyHead;
 	return result;
 }
+
+ListNode* Link::reverse(ListNode* head) {
+	ListNode* prev = nullptr;
+	ListNode* current = head;
+	while (current != nullptr) {
+		ListNode* nextTemp = current->next;
+		current->next = prev;
+		prev = current;
+		current = nextTemp;
+	}
+	return prev;
+}

@@ -8,7 +8,7 @@
 [About this repository](#dad)  
 
 ## <a name="what" />What's this repository? </a>
-
+  
 I'm trying to learn/brush up on different programming techniques. This includes using Git, Markdown, VS Code, and of course, C++. This is my place to practice code, and a place where I can refer to it later on.
 
 ## <a name="new"/>What's New?</a>

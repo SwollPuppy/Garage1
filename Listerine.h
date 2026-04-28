@@ -36,4 +36,6 @@ public:
 
 	//The real Link. Turns out that int's a even long long int's don't cover all the cases.
 	ListNode* add2Numbers(ListNode*, ListNode*);
+
+	ListNode* reverse(ListNode*);
 };
