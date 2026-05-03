@@ -91,13 +91,14 @@ ListNode* Link::add2Numbers(ListNode* l1, ListNode* l2) {
 }
 
 ListNode* Link::reverse(ListNode* head) {
-	ListNode* prev = nullptr;
+	ListNode* tail = nullptr; // This will be what we are returning, the new head of the reversed list
 	ListNode* current = head;
+
 	while (current != nullptr) {
-		ListNode* nextTemp = current->next;
-		current->next = prev;
-		prev = current;
-		current = nextTemp;
+		ListNode* nextTemp = current->next; // Store the next node before we change current's next pointer
+		current->next = tail; // Reverse the current node's pointer to point to the previous node (tail)
+		tail = current; // Move the tail to the current node, which is now the new head of the reversed list
+		current = nextTemp; // Move to the next node in the original list. This is safe because we stored it in nextTemp before changing current's next pointer.
 	}
-	return prev;
+	return tail;
 }
