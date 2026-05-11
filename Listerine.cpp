@@ -65,9 +65,9 @@ ListNode* Link::int2lists(int x) {
 }
 
 ListNode* Link::add2Numbers(ListNode* l1, ListNode* l2) {
-	ListNode* dummyHead = new ListNode(0);
-	ListNode* tail = dummyHead;
-	int carry = 0;
+	ListNode* dummyHead = new ListNode(0); // The use of new is for the use of a list node that will exist after the function ends, 
+	ListNode* tail = dummyHead;            // since we are returning a pointer to it. If we had used a local variable, it would have 
+	int carry = 0;                         // been destroyed when the function ends, and we would be returning a pointer to a non-existent object, which would lead to undefined behavior.
 
 	while (l1 != nullptr || l2 != nullptr || carry != 0) {
 		int digit1 = (l1 != nullptr) ? l1->val : 0;
@@ -88,4 +88,17 @@ ListNode* Link::add2Numbers(ListNode* l1, ListNode* l2) {
 	ListNode* result = dummyHead->next;
 	delete dummyHead;
 	return result;
+}
+
+ListNode* Link::reverse(ListNode* head) {
+	ListNode* tail = nullptr; // This will be what we are returning, the new head of the reversed list
+
+	while (head != nullptr) {
+		ListNode* nextTemp = head->next; // Store the next node before we change current's next pointer
+		head->next = tail;               // Reverse the current node's pointer to point to the previous node (tail)
+		tail = head;                     // Move the tail to the current node, which is now the new head of the reversed list
+		head = nextTemp;                 // Move to the next node in the original list. This is safe because we stored it in nextTemp before changing current's next pointer.
+	}
+
+	return tail;
 }
