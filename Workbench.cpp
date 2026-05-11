@@ -16,6 +16,8 @@ bool ACME      = false;
 bool HAGRID    = false;
 bool REWIND    = true;
 
+Config cfg = { false, LINKIT, PARSETEST, OCTOPUS, ACME, HAGRID, REWIND };
+
 //This is where it all starts. Using header files too.
 int main()
 {
