@@ -8,7 +8,7 @@
 using namespace std;
 
 // Which part of the workbench do we want to enable?
-//bool LEGACY    = true;
+bool LEGACY    = true;
 bool LINKIT    = true;
 bool PARSETEST = false;
 bool OCTOPUS   = false;
@@ -16,13 +16,24 @@ bool ACME      = false;
 bool HAGRID    = false;
 bool REWIND    = true;
 
-Config cfg = { false, LINKIT, PARSETEST, OCTOPUS, ACME, HAGRID, REWIND };
+Config cfg = { LEGACY, LINKIT, PARSETEST, OCTOPUS, ACME, HAGRID, REWIND };
 
 //This is where it all starts. Using header files too.
 int main()
 {
 	//The start of this thing.
 	cout << "Hello World!\n";
+
+	//This is where we can set up our configuration for the workbench.
+	Configfig(cfg);
+
+	cout << "Legacy: " << cfg.legacy << endl;
+	cout << "Linkit: " << cfg.linkit << endl;
+	cout << "ParseTest: " << cfg.parsetest << endl;
+	cout << "Octopus: " << cfg.octopus << endl;
+	cout << "Acme: " << cfg.acme << endl;
+	cout << "Hagrid: " << cfg.hagrid << endl;
+	cout << "Rewind: " << cfg.rewind << endl;
 
 	//Function that just announces itself
 	TownCrier();
@@ -44,7 +55,7 @@ int main()
 
 	showIntVector(nums);
 
-	if (LINKIT) {
+	if (cfg.linkit) {
 		cout << endl;
 		cout << "*** Linked List Test ***" << endl;
 
@@ -72,7 +83,7 @@ int main()
 		leet.showList(sol);
 	}
 
-	if (PARSETEST) {
+	if (cfg.parsetest) {
 		cout << endl;
 		cout << "*** Parsley Test ***" << endl;
 		string user_input;
@@ -90,7 +101,7 @@ int main()
 		cout << "Max value is: " << userbush.maxVal() << endl;
 	}
 
-	if (OCTOPUS) {
+	if (cfg.octopus) {
 		cout << endl;
 		cout << "*** Octopus Test ***" << endl;
 		
@@ -110,7 +121,7 @@ int main()
 		showIntVector(numlist);
 	}
 
-	if(ACME){
+	if(cfg.acme){
 		cout << endl;
 		cout << "*** ACME Test ***" << endl;
 
@@ -128,7 +139,7 @@ int main()
 		anvil.showVector();
 	}
 
-	if (HAGRID) {
+	if (cfg.hagrid) {
 		cout << endl;
 		cout << "*** Hagrid Test ***" << endl;
 		vector<vector<int>> stag = { {4,7},{8,9},{5,3},{6,10},{2,9},{3,10},{2,2},{5,8},{5,10},{5,6},{8,9},{10,7},{8,9},{3,7},{2,6},{5,1},{7,4},{1,10},{1,7},{6,9},{3,3},{4,6},{8,2},{10,6},{7,9},{9,2},{1,2},{3,8},{10,2},{4,1},{9,7},{10,3},{6,9},{9,8},{7,7},{5,7},{5,4},{6,5},{1,8},{2,3},{7,10},{3,9},{5,7},{2,4},{5,6},{9,5},{8,8},{8,10},{6,8},{5,1},{10,8},{7,4},{2,1},{2,7},{10,3},{2,5},{7,6},{10,5},{10,9},{5,7},{10,6},{4,3},{10,4},{1,5},{8,9},{3,1},{2,5},{9,10},{6,6},{5,10},{10,2},{6,10},{1,1},{8,6},{1,7},{6,3},{9,3},{1,4},{1,1},{10,4},{7,9},{4,5},{2,8},{7,9},{7,3},{4,9},{2,8},{4,6},{9,1},{8,4},{2,4},{7,8},{3,5},{7,6},{8,6},{4,7},{25,60},{39,52},{16,63},{33,56} };
@@ -147,7 +158,7 @@ int main()
 
 	}
 
-	if (REWIND) {
+	if (cfg.rewind) {
 		cout << endl;
 		cout << "*** Rewind Test ***" << endl;
 		ListNode f4 = ListNode(2);
